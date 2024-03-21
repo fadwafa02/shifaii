@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sélectionnez votre excuse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Excuse</ion-label>
+      <ion-select [(ngModel)]="selectedExcuse1">
+        <ion-select-option *ngFor="let excuse of predefinedExcuses" [value]="excuse">{{ excuse }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="full" color="light" (click)="dismiss()">Annuler</ion-button>
+    <ion-button expand="full" color="primary" (click)="confirm()">Confirmer</ion-button>
+  </ion-toolbar>
+</ion-footer>

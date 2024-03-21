@@ -1,0 +1,68 @@
+
+.circle{
+    width: 120px;
+    height: 120px;
+    border-radius: 50% 50% 50% 50%;
+  }
+  .backgrounds{
+    position: fixed; /* pour rester fixe en bas de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ajustez la hauteur selon vos besoins */
+    background-image: url('../../assets/image/back.png');
+    background-size: cover; /* Ajustez le redimensionnement de l'image selon vos besoins */
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Placez-le au-dessus du contenu de la page */ 
+}
+.divider {
+    display: flex;
+    &:before,
+    &:after{
+      content: "";
+      flex: 1;
+    }
+  }
+  .line {
+    align-items: center;
+    margin: 1em -1em;
+    color: #85a3f5;
+    &:before,
+    &:after {
+      height: 1px;
+      margin: 0 1em;
+    }
+  }
+  .one-line {
+    &:before,
+    &:after {
+      height: 1px;
+      margin: 0 1em;
+    }
+  }
+  .one-line {
+    &:before,
+    &:after {
+      background: #ccc;
+    }
+  }
+  .ion-color-orange-new {
+	--ion-color-base: var(--ion-color-orange-new);
+	--ion-color-base-rgb: var(--ion-color-orange-new-rgb);
+	--ion-color-contrast: var(--ion-color-orange-new-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-orange-new-contrast-rgb);
+	--ion-color-shade: var(--ion-color-orange-new-shade);
+	--ion-color-tint: var(--ion-color-orange-new-tint);
+}
+.orange{
+    color:#E97712; 
+}
+.left {
+    position: absolute;
+    left:0;
+    top:0;
+  }

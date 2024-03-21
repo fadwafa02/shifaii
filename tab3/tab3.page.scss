@@ -1,0 +1,29 @@
+.right {
+    float: right;
+  }
+  .left {
+    float: left;
+  }
+  .wrapper{
+    max-height: 70px;
+    display: flex;
+    overflow-x: auto;
+  }
+  .wrapper.item{
+    height: 70px;
+    min-width: 70px;
+    line-height: 110px;
+    text-align: center;
+  }
+  .magazine{
+    position: sticky; /* pour rester fixe en bas de la page */
+
+    width: 90%;
+    height: 20%; /* Ajustez la hauteur selon vos besoins */
+    background-image: url('../../assets/image/mag.png');
+    background-size: cover; /* Ajustez le redimensionnement de l'image selon vos besoins */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1; /* Placez-le au-dessus du contenu de la page */ 
+  }

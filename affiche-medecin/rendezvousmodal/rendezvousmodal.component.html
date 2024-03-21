@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter un rendez-vous</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <!-- Affichage de l'heure sélectionnée -->
+    <p>Heure sélectionnée : {{ selectedTime }}</p>
+    <p>prenom du patient : {{  patientName }}</p>
+  
+    <!-- Affichage du nom du patient -->
+    <p>nom du patient : {{ patientnom }}</p>
+    <p>date de rdv  : {{ dates }}</p>
+  
+    <!-- Affichage de l'UID du patient -->
+   <!-- <p>UID du patient : {{ uidPatient }}</p> -->
+  </ion-content>
+
+  <div class="modal-buttons">
+    <ion-button expand="block" color="primary" (click)="saveRendezVous()">Enregistrer</ion-button>
+  </div>
+</ion-content>

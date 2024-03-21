@@ -1,0 +1,10 @@
+.work-hours-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divise en deux colonnes égales */
+    gap: 10px; /* Espacement entre les éléments */
+    margin-left: 10%;
+  }
+  
+  .work-hour-button {
+    width: 70%; /* Remplir la largeur de la colonne */
+  }

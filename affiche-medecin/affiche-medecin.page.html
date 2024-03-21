@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+      <ion-button slot="start" routerLink="/recherche-medecin" fill="clear" color="light">Retour</ion-button>
+      <ion-title>Header Demi-Cercle</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div *ngIf="medecin">
+  <div class="profile-details">
+    <!-- Coordonnées -->
+    <div class="contact-details">
+      <div class="title">Coordonnées</div>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Nom:</ion-label>
+          <ion-text>{{ medecin[0].nom }} {{ medecin[0].prenom }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Email:</ion-label>
+          <ion-text>{{ medecin[0].email }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Téléphone:</ion-label>
+          <ion-text>{{ medecin[0].telephone }} </ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <!-- Descriptions -->
+    <div class="description-details">
+      <div class="title">Description</div>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Age:</ion-label>
+          <ion-text>45</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Adresse:</ion-label>
+          <ion-text>Zarzis</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Description:</ion-label>
+          <ion-text>medecin generaliste</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+  <ion-button (click)="openWorkHoursModal()"><ion-icon name="calendar-outline"></ion-icon>&nbsp;Prendre Rendez-vous</ion-button>
+</div>
+<br><br><br><br>
+
+
+
+</ion-content>

@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Personne</ion-title>
+    <ion-buttons slot= "end">
+      <ion-button (click)="openWorkHoursModal()">Suivant</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">Fermer</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<div *ngFor="let personne of people">
+  <label>
+    <input type="radio" name="selectedPersonne" [checked]="personne.selected" (change)="toggleSelection(personne)">
+    {{ personne.nom }} {{ personne.prenom }}
+  </label>
+</div>
+
+
+
+
+
+<ion-button (click)="ajoutPersonneModal()">Ajouter une personne</ion-button>
+
+

@@ -1,0 +1,48 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-title>Recherche Medecin</ion-title>
+    <ion-button slot="start" routerLink="/tabs/tab2" >
+      Retour
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+  <ion-item  class="entier">
+    <ion-label position="stacked"><ion-icon name="search-outline" class="warning"></ion-icon>&nbsp;Spécialité</ion-label>
+    <ion-select [(ngModel)]="specialite" name="specialite">
+      <ion-select-option *ngFor="let specialite of specialites" [value]="specialite">{{ specialite }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item  class="entier">
+    <ion-label position="stacked"><ion-icon name="location-outline"></ion-icon>&nbsp;État</ion-label>
+    <ion-select [(ngModel)]="etat" name="etat">
+      <ion-select-option *ngFor="let etat of etatsTunisiens" [value]="etat">{{ etat }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-col>
+  <ion-col size="auto">
+    <ion-button  color="danger" (click)="fetchMedecins()"  >
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-col>
+</ion-row>
+</ion-grid>
+<ion-card *ngFor="let medecin of medecins">
+  <ion-card-header>
+    {{ medecin.nom }} {{ medecin.prenom }}
+  </ion-card-header>
+  <ion-card-content>
+    <p>Localisation: {{ medecin.localisation }}</p>
+    <p>Spécialité: {{ medecin.specialite }}</p>
+    <p>Uid: {{ medecin.uid }}</p>
+    <ion-button (click)="goToAfficheMedecin(medecin.uid)" color="success">Voir détails</ion-button>
+
+  </ion-card-content>
+</ion-card>
+</ion-content>

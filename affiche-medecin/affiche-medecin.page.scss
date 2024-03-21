@@ -1,0 +1,113 @@
+.header{
+    height:  100px;
+    width: 100%;
+    background-color: #3575FE;
+    border-radius: 0% 0% 50% 50% ;
+}
+.footer{
+    padding-bottom:10%;
+    padding-left: 50%;
+    padding-right: 50%;
+    
+}
+.header {
+    height: 180px;
+    background-color: #3575FE;
+    width: 100%;
+    padding-top: 1px;
+}
+.header h2 {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 0% 50% 50%;
+}
+.profile-details {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+  }
+  
+  .contact-details {
+    width:auto;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  ion-list {
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+  
+  ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+  
+  ion-label {
+    font-weight: bold;
+  }
+  
+  ion-text {
+    font-style: italic;
+  }
+  ion-header {
+    ion-toolbar {
+      --border-radius: 0% 0% 50% 50%;
+      --overflow: hidden;
+    }
+  
+    .toolbar-background {
+      height: 120px; /* Hauteur du demi-cercle */
+    }
+  
+    .title {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      width: 100%;
+    }
+  }
+  /* Style pour le conteneur div */
+.work-hours-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style pour les boutons */
+.work-hour-button {
+  margin-bottom: 10px; /* Espacement entre chaque bouton */
+  padding: 8px 16px; /* Espacement interne */
+  background-color: #007bff; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 4px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointeur */
+}
+
+/* Style pour les boutons désactivés */
+.work-hour-button[disabled] {
+  background-color: #ccc; /* Couleur de fond grise */
+  cursor: not-allowed; /* Curseur interdit */
+}
+
+.work-hours-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divise en deux colonnes égales */
+  gap: 10px; /* Espacement entre les éléments */
+  margin-left: 10%;
+}
+
+.work-hour-button {
+  width: 70%; /* Remplir la largeur de la colonne */
+}

@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  
+    <ion-button routerLink="/tabs/tab3" fill="clear"> Retour</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+  <ion-item class="entier">
+    <ion-icon name="search-outline" class="warning"></ion-icon>
+    <ion-input placeholder="&nbsp;Nom" type="text" name="nom" [(ngModel)]="nom" >
+      
+    </ion-input>
+  </ion-item>
+</ion-col>
+
+  <ion-col size="auto">
+    <ion-button (click)="fetchMedicament()"> 
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-col>
+</ion-row>
+</ion-grid>
+
+<div *ngIf="medicaments && medicaments.length > 0">
+  <div *ngFor="let med of medicaments">
+    <p><strong>Class:</strong> {{ med.class }}</p>
+    <p><strong>Conditionnement:</strong> {{ med.conditionnement }}</p>
+    <p><strong>Conservation:</strong> {{ med.conservation }}</p>
+    <p><strong>AMM:</strong> {{ med.amm }}</p>
+    <p><strong>Date AMM:</strong> {{ med.dateamm }}</p>
+    <p><strong>DCI:</strong> {{ med.dci }}</p>
+    <p><strong>Dosage:</strong> {{ med.dosage }}</p>
+    <p><strong>Forme:</strong> {{ med.forme }}</p>
+    <p><strong>Indication:</strong> {{ med.indication }}</p>
+    <p><strong>Laboratoire:</strong> {{ med.laboratoire }}</p>
+    <p><strong>Sous-class:</strong> {{ med.sousclass }}</p>
+    <p><strong>Spécialité:</strong> {{ med.specialite }}</p>
+    <p><strong>Spécification:</strong> {{ med.specification }}</p>
+    <p><strong>Tableau:</strong> {{ med.tableau }}</p>
+  </div>
+</div>
+<div *ngIf="medicaments && medicaments.length === 0">
+  <p>Aucun médicament trouvé.</p>
+</div>
+
+
+</ion-content>

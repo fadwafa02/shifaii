@@ -1,0 +1,68 @@
+.right {
+    float: right;
+  }
+  .center{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+  }
+  .left {
+    float: left;
+  }
+  .couleur1{
+    background-color: #3575FE;
+  }
+  .couleur2{
+    background-color: #193378;
+  }
+  .couleur3{
+    background-color: #E97712;
+  }
+  
+  ion-card-title{
+    color : white;
+  }
+  .medecin{
+    position: sticky; /* pour rester fixe en bas de la page */
+    width: 90%;
+    height: 70%; /* Ajustez la hauteur selon vos besoins */
+    background-image: url('../../assets/image/medecin.png');
+    background-size: cover; /* Ajustez le redimensionnement de l'image selon vos besoins */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1; /* Placez-le au-dessus du contenu de la page */ 
+}
+.document{
+  position: sticky; /* pour rester fixe en bas de la page */
+  width: 90%;
+  height: 70%; /* Ajustez la hauteur selon vos besoins */
+  background-image: url('../../assets/image/dossierM.png');
+  background-size: cover; /* Ajustez le redimensionnement de l'image selon vos besoins */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1; /* Placez-le au-dessus du contenu de la page */ 
+}
+.medicament{
+  position: sticky; /* pour rester fixe en bas de la page */
+  width: 90%;
+  height: 70%; /* Ajustez la hauteur selon vos besoins */
+  background-image: url('../../assets/image/medicament.png');
+  background-size: cover; /* Ajustez le redimensionnement de l'image selon vos besoins */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1; /* Placez-le au-dessus du contenu de la page */ 
+}
+.securite{
+  position: sticky; /* pour rester fixe en bas de la page */
+  width: 90%;
+  height: 70%; /* Ajustez la hauteur selon vos besoins */
+  background-image: url('../../assets/image/secu.png');
+  background-size: cover; /* Ajustez le redimensionnement de l'image selon vos besoins */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1; /* Placez-le au-dessus du contenu de la page */ 
+}

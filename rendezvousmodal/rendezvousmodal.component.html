@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter un rendez-vous</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Nom du patient</ion-label>
+      <ion-input type="text" [(ngModel)]="personneName" [value]="personne.nom + ' ' + personne.prenom" disabled></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Heure</ion-label>
+      <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="selectedTime"></ion-datetime>
+    </ion-item>
+    <!-- Ajoutez d'autres champs pour les informations du rendez-vous si nécessaire -->
+  </ion-list>
+
+  <div class="modal-buttons">
+    <ion-button expand="block" color="primary" (click)="saveRendezVous()">Enregistrer</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,128 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button text="Retour" routerLink="/homemedecin">Retour
+      </ion-back-button>
+    </ion-button>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="justify-content-center">
+     <ion-col>
+      <div class="ion-text-center">
+        <br><br><br><br>
+        <h4>Register Form medecin</h4>
+      </div><br><br><br><br>
+      <div class="form">
+        <form>
+        <ion-item>
+          <ion-input [(ngModel)]="familyName" placeholder="Enter your family name" type="text"  name="familyName" [ngModelOptions]="{standalone: true}">
+            <ion-icon name="person-outline"></ion-icon>
+          </ion-input>
+        </ion-item><br>
+        <ion-item>
+          <ion-input [(ngModel)]="name" placeholder="Enter your name" type="text"  name="name">
+            <ion-icon name="person-outline"></ion-icon>
+          </ion-input>
+        </ion-item><br>
+
+        <ion-item>
+          <ion-label position="stacked">Spécialité</ion-label>
+          <ion-select [(ngModel)]="selectedSpecialite" name="selectedSpecialite">
+            <ion-select-option *ngFor="let specialite of specialites" [value]="specialite">{{ specialite }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+          <br>
+          <ion-item>
+          <ion-label position="stacked">État</ion-label>
+<ion-select [(ngModel)]="selectedState" (ionChange)="onStateChange()" aria-label="État" name="selectedState">
+    <ion-select-option value="Ariana">Ariana</ion-select-option>
+    <ion-select-option value="Beja">Beja</ion-select-option>
+    <ion-select-option value="Ben Arous">Ben Arous</ion-select-option>
+    <ion-select-option value="Bizerte">Bizerte</ion-select-option>
+    <ion-select-option value="Gabes">Gabes</ion-select-option>
+    <ion-select-option value="Gafsa">Gafsa</ion-select-option>
+    <ion-select-option value="Jendouba">Jendouba</ion-select-option>
+    <ion-select-option value="Kairouan">Kairouan</ion-select-option>
+    <ion-select-option value="Kasserine">Kasserine</ion-select-option>
+    <ion-select-option value="Kebili">Kebili</ion-select-option>
+    <ion-select-option value="Le Kef">Le Kef</ion-select-option>
+    <ion-select-option value="Mahdia">Mahdia</ion-select-option>
+    <ion-select-option value="La Manouba">La Manouba</ion-select-option>
+    <ion-select-option value="Médenine">Médenine</ion-select-option>
+    <ion-select-option value="Monastir">Monastir</ion-select-option>
+    <ion-select-option value="Nabeul">Nabeul</ion-select-option>
+    <ion-select-option value="Sfax">Sfax</ion-select-option>
+    <ion-select-option value="Sidi Bouzid">Sidi Bouzid</ion-select-option>
+    <ion-select-option value="Siliana">Siliana</ion-select-option>
+    <ion-select-option value="Sousse">Sousse</ion-select-option>
+    <ion-select-option value="Tataouine">Tataouine</ion-select-option>
+    <ion-select-option value="Tozeur">Tozeur</ion-select-option>
+    <ion-select-option value="Tunis">Tunis</ion-select-option>
+    <ion-select-option value="Zaghouan">Zaghouan</ion-select-option>
+</ion-select>
+
+            <br>
+            </ion-item>
+
+            <ion-item *ngIf="selectedState">
+              <ion-label position="stacked">Délégation</ion-label>
+              <ion-select [(ngModel)]="selectedDelegation"  name="selectedDelegation">
+                <ion-select-option *ngFor="let delegation of delegations[selectedState]" [value]="delegation">
+                  {{ delegation }}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="email" placeholder="Enter email" type="email"  name="email">
+            <ion-icon name="mail-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-input [(ngModel)]="telephone" placeholder="Entrer votre numéro de téléphone" type="text"  name="telephone">
+            <ion-icon name="call-outline"></ion-icon>
+            </ion-input>
+          </ion-item>
+          <br>
+        <ion-item>
+        <ion-input [(ngModel)]="password" placeholder="Enter password" type="password" spellcheck="false" name="password">
+          <ion-icon name="lock-closed-outline"></ion-icon></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-input [(ngModel)]="date" placeholder="Enter date" type="date"  name="date">
+            </ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <label for="fileInput">Upload File</label>
+            <input type="file" id="fileInput" name="fileInput" accept="*/*" (change)="onFileSelected($event)">
+            <div *ngIf="selectedFile">
+              <img [src]="selectedFileUrl" alt="Selected Image">
+            </div>
+          </ion-item>
+          <br>
+        </form>
+      </div>
+      <label>
+        <input type="radio" [(ngModel)]="sexe"  name="sexe" value="Masculin"> Masculin
+      </label>
+      <label>
+        <input type="radio" [(ngModel)]="sexe"  name="sexe" value="Féminin"> Féminin
+      </label>
+      <br>
+      <div padding>
+        <br><br><br><br>
+        
+        <ion-button size="large" expand="block" (click)="AddUser()" >Register</ion-button>
+      </div>
+     </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

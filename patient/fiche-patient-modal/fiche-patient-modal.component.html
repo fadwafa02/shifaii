@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Fiche Patient</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Fermer</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ rendezVousData.nom }} {{ rendezVousData.prenom }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Champs du rendez-vous -->
+      <ion-item>
+        <ion-label>Nom</ion-label>
+        <ion-input [(ngModel)]="rendezVousData.nom" disabled></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Prénom</ion-label>
+        <ion-input [(ngModel)]="rendezVousData.prenom" disabled></ion-input>
+      </ion-item>
+
+      <!-- Champs classiques d'une fiche patient -->
+      <ion-item>
+        <ion-label>Âge</ion-label>
+        <ion-input type="number" [(ngModel)]="fichePatient.age"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Adresse</ion-label>
+        <ion-input [(ngModel)]="fichePatient.adresse"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Téléphone</ion-label>
+        <ion-input type="tel" [(ngModel)]="fichePatient.telephone"></ion-input>
+      </ion-item>
+
+      <!-- Ajoutez d'autres champs selon vos besoins -->
+
+      <ion-button expand="block" (click)="saveFichePatient()">Enregistrer</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

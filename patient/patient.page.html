@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste des rendez-vous</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let rdv of rdvs">
+      <ion-label>{{ rdv.date }} - {{ rdv.heure }} - {{ rdv.nom }} {{ rdv.prenom }}</ion-label>
+      <ion-button (click)="openFichePatientModal(rdv)" color="primary">Fiche Patient</ion-button>
+      <ion-button (click)="showFichePatient(rdv)" color="primary" [disabled]="!fichePatientExiste">Afficher Fiche Patient</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

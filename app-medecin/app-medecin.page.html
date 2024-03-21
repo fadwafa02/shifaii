@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>app-medecin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">app-medecin</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+    <ion-card routerLink="/patients">
+      <ion-card-header>
+        <ion-card-title><ion-icon name="accessibility-outline"></ion-icon>&nbsp;Patient</ion-card-title>
+        <ion-card-subtitle></ion-card-subtitle>
+      </ion-card-header>
+    
+      
+    </ion-card>
+  </ion-col>
+  <ion-col>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-icon name="file-tray-stacked-outline"></ion-icon>&nbsp;Consultation</ion-card-title>
+        <ion-card-subtitle></ion-card-subtitle>
+      </ion-card-header>
+     
+      
+    </ion-card>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><ion-icon name="people-circle-outline"></ion-icon>&nbsp;Salle d'attente</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+  
+    
+  </ion-card>
+</ion-col>
+<ion-col>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><ion-icon name="folder-outline"></ion-icon>&nbsp;Documents</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+   
+    
+  </ion-card>
+</ion-col>
+</ion-row>
+
+  </ion-grid>
+ 
+</ion-content>
+<ion-footer collapse="fade">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button routerLink="/app-medecin">
+          <ion-icon name="home-outline" ></ion-icon>
+          Home
+        </ion-tab-button>
+        <ion-tab-button routerLink="/calender-medecin">
+          <ion-icon name="calendar-outline" ></ion-icon>
+          Calendrier
+        </ion-tab-button>
+        <ion-tab-button routerLink="/parametre-med">
+          <ion-icon name="settings-outline" ></ion-icon>
+          Réglage
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,76 @@
+.right {
+    float: right;
+    font-size: 32px;
+  }
+  .left {
+    float: left;
+  }
+  .wrapper{
+    max-height: 70px;
+    display: flex;
+    overflow-x: auto;
+    width:100%;
+  }
+  .wrapper.item{
+    height: 20%;
+    min-width: 20%;
+    line-height: 70px;
+    text-align: center;
+  }
+  .magazine{
+    position: sticky; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 70%; /* Ajustez la hauteur selon vos besoins */
+    background-image: url('../../assets/image/mag.png');
+    background-size: cover; /* Ajustez le redimensionnement de l'image selon vos besoins */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1; /* Placez-le au-dessus du contenu de la page */ 
+  }
+  .logo-icon {
+    width: 32px; /* Ajustez la largeur en fonction de vos besoins */
+    height: 32px; /* Ajustez la hauteur en fonction de vos besoins */
+    background: url('../../assets/image/shifai.png') no-repeat center center;
+    background-size: contain; /* Pour s'assurer que le logo est complètement visible */
+    border-radius: 50% 50% 50% 50%;
+    margin-left: 2%;
+  }
+  
+  .alimentation{
+    position: sticky;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 70%; /* Ajustez la hauteur selon vos besoins */
+    background-image: url('../../assets/image/alimentation.png');
+    background-size: cover; /* Ajustez le redimensionnement de l'image selon vos besoins */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1; /* Placez-le au-dessus du contenu de la page */ 
+  }
+ 
+  .backgrounds{
+    position: fixed; /* pour rester fixe en bas de la page */
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Ajustez la hauteur selon vos besoins */
+    background-image: url('../../assets/image/backAC.png');
+    background-size: cover; /* Ajustez le redimensionnement de l'image selon vos besoins */
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1; /* Placez-le au-dessus du contenu de la page */ 
+}
+    
+ .texte{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }  

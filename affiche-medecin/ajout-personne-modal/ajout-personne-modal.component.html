@@ -1,0 +1,13 @@
+<form>
+  <ion-item>
+    <ion-label position="stacked">Nom</ion-label>
+    <ion-input type="text" name="nom" [(ngModel)]="nom" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Prénom</ion-label>
+    <ion-input type="text" name="prenom" [(ngModel)]="prenom" required></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" type="submit" (click)="savePerson()">Enregistrer</ion-button>
+</form>

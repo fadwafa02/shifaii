@@ -1,0 +1,58 @@
+
+  <ion-content >
+    <div class="backgrounds">
+    <div class="connexion">
+    <ion-header collapse="condense">
+      <ion-button color="light" slot="start" (click)="back()" fill="clear">
+        ← Retour
+      </ion-button>
+    </ion-header>
+    
+    
+    
+          <div class="ion-text-center" >
+            <br>
+            <h4>Connexion</h4>
+          </div>
+          <br><br><br>
+          <div class="form">
+            <div class="item">
+            <ion-item>
+              <ion-input placeholder="Enter email" type="email" [(ngModel)]="email">
+
+                <ion-icon name="mail-outline">
+                </ion-icon>
+              </ion-input>
+            </ion-item>
+          </div>
+            <br>
+            <form>
+              <div class="item" shape="round">
+            <ion-item>
+              <ion-input placeholder="Enter password" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </ion-input>
+            </ion-item>
+            </div>
+          </form>
+            <br>
+          </div>
+          
+        </div>
+          <div>
+            <br><br><br>
+            <ion-button (click)="loginUser()" size="large" expand="block" shape="round">Login</ion-button>
+            
+            <ion-button routerLink="/forgotpass" fill="clear">
+              Forgot Password
+            </ion-button>
+            
+          </div>
+    
+        <ion-button routerLink="/signup" fill="clear">
+          Vous n'avez pas de compte ? 
+        </ion-button>
+      </div>
+  </ion-content>
+

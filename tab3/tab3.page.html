@@ -1,0 +1,77 @@
+
+
+<ion-content [fullscreen]="true">
+
+  <p><b>&nbsp;&nbsp;&nbsp;Vous chercher.....</b></p>
+  <div class="wrapper">
+   
+    <div class="item">
+        <ion-card color="primary">
+          <ion-card-header>
+            <ion-card-title>pharmacie</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+      <div class="item">
+  <ion-card color="primary" >
+    <ion-card-header>
+      <ion-card-title>hopital</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+<div class="item">
+  <ion-card color="primary" >
+    <ion-card-header>
+      <ion-card-title>clinique</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+<div class="item">
+  <ion-card color="primary" routerLink="/recherche-medicament">
+    <ion-card-header>
+      <ion-card-title>medicament</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+<div class="item">
+  <ion-card color="primary" >
+    <ion-card-header>
+      <ion-card-title >laboratoire</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+</div>
+
+  <ion-card class="magazine">
+    <ion-card-header>
+      <ion-card-title>mon actu'sante</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content></ion-card-content>
+    
+  </ion-card>
+
+
+ 
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button >
+          <ion-icon name="home-outline" routerLink="/tabs/tab1"></ion-icon>
+          Home
+        </ion-tab-button>
+        <ion-tab-button >
+          <ion-icon name="calendar-outline" routerLink="/tabs/tab2"></ion-icon>
+          Rendez-vous
+        </ion-tab-button>
+        <ion-tab-button >
+          <ion-icon name="pin-outline" routerLink="/tabs/tab3"></ion-icon>
+          A remplir
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

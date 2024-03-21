@@ -1,0 +1,64 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-button routerLink="/alimentation" fill="clear"> Retour</ion-button>
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Pays</ion-label>
+          <ion-select [(ngModel)]="selectedCountry">
+            <ion-select-option value="african">Africain</ion-select-option>
+            <ion-select-option value="asian">Asiatique</ion-select-option>
+            <ion-select-option value="american">Américain</ion-select-option>
+            <ion-select-option value="british">Britannique</ion-select-option>
+            <ion-select-option value="cajun">Cajun</ion-select-option>
+            <ion-select-option value="caribbean">Caribéen</ion-select-option>
+            <ion-select-option value="chinese">Chinois</ion-select-option>
+            <ion-select-option value="eastern_european">Européen de l'Est</ion-select-option>
+            <ion-select-option value="european">Européen</ion-select-option>
+            <ion-select-option value="french">Français</ion-select-option>
+            <ion-select-option value="german">Allemand</ion-select-option>
+            <ion-select-option value="greek">Grec</ion-select-option>
+            <ion-select-option value="indian">Indien</ion-select-option>
+            <ion-select-option value="irish">Irlandais</ion-select-option>
+            <ion-select-option value="italian">Italien</ion-select-option>
+            <ion-select-option value="japanese">Japonais</ion-select-option>
+            <ion-select-option value="jewish">Juif</ion-select-option>
+            <ion-select-option value="korean">Coréen</ion-select-option>
+            <ion-select-option value="latin_american">Latin Américain</ion-select-option>
+            <ion-select-option value="mediterranean">Méditerranéen</ion-select-option>
+            <ion-select-option value="mexican">Mexicain</ion-select-option>
+            <ion-select-option value="middle_eastern">Moyen-Orient</ion-select-option>
+            <ion-select-option value="nordic">Nordique</ion-select-option>
+            <ion-select-option value="southern">Sudiste</ion-select-option>
+            <ion-select-option value="spanish">Espagnol</ion-select-option>
+            <ion-select-option value="thai">Thaï</ion-select-option>
+            <ion-select-option value="vietnamese">Vietnamien</ion-select-option>
+          </ion-select>
+        </ion-item>
+        
+</ion-col>
+
+  <ion-col size="auto">
+    <ion-button  (click)="searchRecipesByTitle()">
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-col>
+</ion-row>
+</ion-grid>
+<ion-card *ngFor="let recipe of recipes.results">
+  <img [src]="recipe.image" [alt]="recipe.title" />
+
+  <ion-card-header>
+    <ion-card-title>{{ recipe.title }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <!-- Ajoutez d'autres informations que vous souhaitez afficher, par exemple : -->
+    <!-- <p>Catégorie: {{ recipe.category }}</p> -->
+    <!-- <p>Instructions: {{ recipe.instructions }}</p> -->
+  </ion-card-content>
+</ion-card>
+</ion-content>
